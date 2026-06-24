@@ -7,6 +7,7 @@ import OtpVerification from "./page/Otp/OtpVerification";
 import NinVerification from "./page/NinVerification/NinVerification";
 import FaceVerification from "./page/FaceVerification/FaceVerification";
 import ForgotPassword from "./page/ForgotPassword/ForgotPassword";
+import Footer from "./components/Footer/Footer";
 
 function AppRoutes() {
   const navigate = useNavigate();
@@ -72,7 +73,9 @@ function AppRoutes() {
       
       <Route path="/complete" element={<div className="text-center text-3xl text-white mt-20">Signup Complete!</div>} />
       <Route path="/forgotpassword" element={<ForgotPassword/>}/>
+       
     </Routes>
+  
   );
 }
 
@@ -80,6 +83,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <AppRoutes />
+      <Footer/>
     </BrowserRouter>
+    
   );
 }
